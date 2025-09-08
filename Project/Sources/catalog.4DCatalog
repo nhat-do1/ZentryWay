@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="ZentryWay" uuid="B1F922F989C54DF882120348BEA5DC93" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Visits" uuid="A9274524C2724D00A7FA00B105F3C762" id="1">
+		<field name="ID" uuid="E64DEC42D8544A989DEC382262C7F549" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="date" uuid="7AB7B9C12EE54B07B544E95B5FBE402E" type="8" id="2"/>
+		<field name="checkin" uuid="3B96F5E133AE4C3E8C1CBE87667306AA" type="9" id="3"/>
+		<field name="checkout" uuid="CC566B5E155C455090487ED50FDD2CD2" type="9" id="4"/>
+		<field name="guestID" uuid="27E1866DD546456C8CB7E501448EC3D8" type="4" unique="true" id="5"/>
+		<field name="hostID" uuid="FDB084A33222498B8F4149E2C17D75F1" type="4" unique="true" id="6"/>
+		<field name="details" uuid="9A8E31A98996454E931B3CBF5F598B1C" type="21" blob_switch_size="2147483647" id="7"/>
+		<field name="documents" uuid="BB0E7F8CE0A341FABFA9F0E5ACA55EE5" type="18" id="8"/>
+		<primary_key field_name="ID" field_uuid="E64DEC42D8544A989DEC382262C7F549"/>
+	</table>
+	<table name="Guests" uuid="0C69B62828674B5F805ED47C993F4187" id="2">
+		<field name="ID" uuid="52FACA9D2C4642AB8F10D1EA52074825" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="email" uuid="8593C38B475644F18735BE345E3A5FD8" type="10" limiting_length="255" id="2"/>
+		<field name="firstName" uuid="45FFC8B3E86149AEBAA4106CB5477B01" type="10" limiting_length="255" id="3"/>
+		<field name="lastName" uuid="F435EB09F2AA4C50A8C6A6E129F499EC" type="10" limiting_length="255" id="4"/>
+		<field name="phone" uuid="06EC0CEAA40B4AC98A0E399C3D3C9EF5" type="10" limiting_length="255" id="5"/>
+		<field name="pic" uuid="0FA337F772F24FABB5F4B5C5E3C9C5B3" type="12" id="6"/>
+		<primary_key field_name="ID" field_uuid="52FACA9D2C4642AB8F10D1EA52074825"/>
+	</table>
+	<table name="Hosts" uuid="F2242BE218494797A719E36A9229BE1C" id="3">
+		<field name="ID" uuid="7CF07E444632419FB39CE249B5BDE7F6" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="email" uuid="1C4153D9F4764698A5A28673A5ADF6FB" type="10" limiting_length="255" id="2"/>
+		<field name="firstName" uuid="71358D1E0459408597DB6246CAB32CF2" type="10" limiting_length="255" id="3"/>
+		<field name="lastName" uuid="74B935D51D4D4C31B6344434F1D62438" type="10" limiting_length="255" id="4"/>
+		<field name="phone" uuid="B8584AD88AD04A6BBA374FC409ADB38B" type="10" limiting_length="255" id="5"/>
+		<field name="pic" uuid="C57D1185BA2C46D6BF432F5DA3EC3348" type="12" id="6"/>
+		<primary_key field_name="ID" field_uuid="7CF07E444632419FB39CE249B5BDE7F6"/>
+	</table>
+	<table name="Users" uuid="35FAAE4285784EE999E2B0EAC8300885" id="4">
+		<field name="ID" uuid="E76CEDA9EFB1472C8FC2FEC3D0CD4615" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="name" uuid="33568859C8B3469385DD7A8309797B3B" type="10" limiting_length="255" id="2"/>
+		<field name="pw" uuid="41717E8C09D74EC1A31ED680425465DC" type="10" limiting_length="255" id="3"/>
+		<primary_key field_name="ID" field_uuid="E76CEDA9EFB1472C8FC2FEC3D0CD4615"/>
+	</table>
+	<relation uuid="C2ADE2E67D4D437C984444C86AFB0EFE" name_Nto1="visitor" name_1toN="visits" state="1">
+		<related_field kind="source">
+			<field_ref uuid="27E1866DD546456C8CB7E501448EC3D8" name="guestID">
+				<table_ref uuid="A9274524C2724D00A7FA00B105F3C762" name="Visits"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="52FACA9D2C4642AB8F10D1EA52074825" name="ID">
+				<table_ref uuid="0C69B62828674B5F805ED47C993F4187" name="Guests"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="877DE383C52841849C4421B6B1F3C9E1" name_Nto1="contact" name_1toN="visits" state="1">
+		<related_field kind="source">
+			<field_ref uuid="FDB084A33222498B8F4149E2C17D75F1" name="hostID">
+				<table_ref uuid="A9274524C2724D00A7FA00B105F3C762" name="Visits"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="7CF07E444632419FB39CE249B5BDE7F6" name="ID">
+				<table_ref uuid="F2242BE218494797A719E36A9229BE1C" name="Hosts"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<index kind="regular" unique_keys="true" uuid="559E1DEF5F5842A9B19E00414B744D96" type="7">
+		<field_ref uuid="7CF07E444632419FB39CE249B5BDE7F6" name="ID">
+			<table_ref uuid="F2242BE218494797A719E36A9229BE1C" name="Hosts"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="60EEE40C5CF04290B52F6E8DA4B6DA2C" type="7">
+		<field_ref uuid="E64DEC42D8544A989DEC382262C7F549" name="ID">
+			<table_ref uuid="A9274524C2724D00A7FA00B105F3C762" name="Visits"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="6A0CD8758D9843A2BFDCD4E88EABC21E" type="1">
+		<field_ref uuid="FDB084A33222498B8F4149E2C17D75F1" name="hostID">
+			<table_ref uuid="A9274524C2724D00A7FA00B105F3C762" name="Visits"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="81B5187A897C4D878FF8A1A997B8A2DE" type="7">
+		<field_ref uuid="52FACA9D2C4642AB8F10D1EA52074825" name="ID">
+			<table_ref uuid="0C69B62828674B5F805ED47C993F4187" name="Guests"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="B491153DAF674C5A8CB7E9EAF754DE8B" type="7">
+		<field_ref uuid="27E1866DD546456C8CB7E501448EC3D8" name="guestID">
+			<table_ref uuid="A9274524C2724D00A7FA00B105F3C762" name="Visits"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F4BCE63A0B314592A5EB33E8D30EC651" type="7">
+		<field_ref uuid="E76CEDA9EFB1472C8FC2FEC3D0CD4615" name="ID">
+			<table_ref uuid="35FAAE4285784EE999E2B0EAC8300885" name="Users"/>
+		</field_ref>
+	</index>
+	<base_extra>
+		<journal_file journal_file_enabled="true"/>
+	</base_extra>
+</base>

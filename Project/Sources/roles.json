@@ -1,0 +1,22 @@
+{
+	"forceLogin": true,
+	"permissions": {
+		"allowed": [
+			{
+				"applyTo": "Hosts",
+				"type": "dataclass",
+				"read": [
+					"client"
+				]
+			}
+		]
+	},
+	"privileges": [
+		{
+			"id": "gBVjt31QvFDsf6bfUQPtzq",
+			"privilege": "client",
+			"includes": []
+		}
+	],
+	"roles": []
+}

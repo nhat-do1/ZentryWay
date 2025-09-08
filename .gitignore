@@ -1,0 +1,9 @@
+[dD][aA][tT][aA]/
+DerivedData/
+Libraries/
+userPreferences.*/
+Project/Trash
+.DS_Store
+ehthumbs.db
+Thumbs.db
+oauth.json

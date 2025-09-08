@@ -1,0 +1,82 @@
+{
+	"tables": {
+		"Users": {
+			"color": {
+				"red": 255,
+				"green": 255,
+				"blue": 255,
+				"alpha": 0
+			},
+			"coordinates": {
+				"left": 665.56640625,
+				"top": 66.4140625,
+				"width": 120,
+				"height": 167.33203125
+			},
+			"displayable_fields_count": 6
+		},
+		"Hosts": {
+			"color": {
+				"red": 255,
+				"green": 255,
+				"blue": 255,
+				"alpha": 0
+			},
+			"coordinates": {
+				"left": 40.219543457031,
+				"top": 2.9713134765625,
+				"width": 120,
+				"height": 174.78515625
+			},
+			"displayable_fields_count": 6
+		},
+		"Guests": {
+			"color": {
+				"red": 255,
+				"green": 255,
+				"blue": 255,
+				"alpha": 0
+			},
+			"coordinates": {
+				"left": 399.4150390625,
+				"top": 0,
+				"width": 120,
+				"height": 173.5859375
+			},
+			"displayable_fields_count": 6
+		},
+		"Visits": {
+			"color": {
+				"red": 255,
+				"green": 255,
+				"blue": 255,
+				"alpha": 0
+			},
+			"coordinates": {
+				"left": 221.61676025391,
+				"top": 74.3583984375,
+				"width": 120,
+				"height": 239.48364257812
+			},
+			"displayable_fields_count": 9
+		}
+	},
+	"relations": {
+		"877DE383C52841849C4421B6B1F3C9E1": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			}
+		},
+		"C2ADE2E67D4D437C984444C86AFB0EFE": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			}
+		}
+	}
+}

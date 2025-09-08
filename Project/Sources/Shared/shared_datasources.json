@@ -1,0 +1,30 @@
+{
+	"language": [
+		{
+			"id": "lang_option",
+			"type": "scalar",
+			"namespace": "language",
+			"dataType": "string",
+			"initialValue": "",
+			"events": [
+				{
+					"type": "method",
+					"dataclass": "ClientSettings",
+					"events": [
+						"onInit"
+					],
+					"id": "jpLLPkHVRpkAA6mrch6ri8",
+					"method": "ClientSettings.getLanguage",
+					"params": [],
+					"datasource": "",
+					"methodType": "singleton",
+					"returns": {
+						"name": "language",
+						"type": "Text",
+						"datasource": "language:lang_option"
+					}
+				}
+			]
+		}
+	]
+}
