@@ -1,6 +1,6 @@
 Class extends Entity
 
-exposed Function emailHost()
+exposed Function notifyHost()
 	var $oAuth2 : cs:C1710.NetKit.OAuth2Provider
 	var $google : cs:C1710.NetKit.Google
 	
@@ -17,16 +17,16 @@ exposed Function emailHost()
 	$param.clientId:=$oauthInfo.client_id
 	$param.clientSecret:=$oauthInfo.client_secret
 	// use saved token to bypass manual sign-in
-	$param.token:=cs:C1710.ClientSettings.me.oauthToken
+	$param.token:=cs:C1710.ClientSession.me.oauthToken
 	
 	// instantiate provider
 	$oAuth2:=cs:C1710.NetKit.OAuth2Provider.new($param)
 	// get new token silently
 	$json:=$oAuth2.getToken()
 	// update saved token
-	$tokenObj:=OB Copy:C1225($json.token; ck shared:K85:29; cs:C1710.ClientSettings.me.oauthToken)
-	Use (cs:C1710.ClientSettings.me.oauthToken)
-		cs:C1710.ClientSettings.me.oauthToken:=New shared object:C1526("token"; $tokenObj)
+	$tokenObj:=OB Copy:C1225($json.token; ck shared:K85:29; cs:C1710.ClientSession.me.oauthToken)
+	Use (cs:C1710.ClientSession.me.oauthToken)
+		cs:C1710.ClientSession.me.oauthToken:=New shared object:C1526("token"; $tokenObj)
 	End use 
 	
 	// compose email
@@ -39,12 +39,24 @@ exposed Function emailHost()
 	$email.textBody+="(This is an automated message. No need to reply.)\n"
 	$email.from:=$oauthInfo.host_email
 	//$email.to:=This.email
-	$email.to:=$oauthInfo.test_email  // testing
+	// testing
+	If (This:C1470.ID#9)
+		$email.to:=$oauthInfo.test_email
+	Else 
+		$email.to:=$oauthInfo.other_test_email
+	End if 
 	
 	$status:=$google.mail.send($email)
 	
 	If (Not:C34($status.success))
 		throw:C1805(500; "Unable to send email")
+	Else 
+		// save selected host info
+		Use (cs:C1710.ClientSession.me)
+			cs:C1710.ClientSession.me.selectedHost:=New shared object:C1526
+			cs:C1710.ClientSession.me.selectedHost.id:=This:C1470.ID
+			cs:C1710.ClientSession.me.selectedHost.firstName:=This:C1470.firstName
+			cs:C1710.ClientSession.me.selectedHost.lastName:=This:C1470.lastName
+		End use 
 	End if 
-	
 	

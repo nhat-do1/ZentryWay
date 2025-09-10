@@ -314,12 +314,12 @@
 					},
 					{
 						"type": "method",
-						"dataclass": "ClientSettings",
+						"dataclass": "ClientSession",
 						"events": [
 							"onclick"
 						],
 						"id": "hCxBhYQA7EECchxvVAp3e6",
-						"method": "ClientSettings.signInOauth2",
+						"method": "ClientSession.signInOauth2",
 						"params": [],
 						"datasource": "",
 						"methodType": "singleton",

@@ -9,12 +9,12 @@
 			"events": [
 				{
 					"type": "method",
-					"dataclass": "ClientSettings",
+					"dataclass": "ClientSession",
 					"events": [
 						"onInit"
 					],
 					"id": "jpLLPkHVRpkAA6mrch6ri8",
-					"method": "ClientSettings.getLanguage",
+					"method": "ClientSession.getLanguage",
 					"params": [],
 					"datasource": "",
 					"methodType": "singleton",
@@ -22,6 +22,33 @@
 						"name": "language",
 						"type": "Text",
 						"datasource": "language:lang_option"
+					}
+				}
+			]
+		}
+	],
+	"host": [
+		{
+			"id": "hostName",
+			"type": "scalar",
+			"namespace": "host",
+			"dataType": "string",
+			"initialValue": "Your host",
+			"events": [
+				{
+					"type": "method",
+					"dataclass": "Hosts",
+					"events": [
+						"onInit"
+					],
+					"id": "nToxGYiupx7F6wqvodBnNH",
+					"method": "ds.Hosts.getSelectedHostFullName",
+					"params": [],
+					"datasource": "",
+					"returns": {
+						"name": "name",
+						"type": "Text",
+						"datasource": "host:hostName"
 					}
 				}
 			]

@@ -1,5 +1,6 @@
 property language : Text
 property oauthToken : Object
+property selectedHost : Object
 
 shared singleton Class constructor
 	This:C1470.language:="eng"  // default English

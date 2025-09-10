@@ -628,12 +628,12 @@
 				"events": [
 					{
 						"type": "method",
-						"dataclass": "ClientSettings",
+						"dataclass": "ClientSession",
 						"events": [
 							"onchange"
 						],
 						"id": "8Y3DRv4MWDrZmjSHRcXFa8",
-						"method": "ClientSettings.setlanguage",
+						"method": "ClientSession.setlanguage",
 						"params": [
 							{
 								"name": "language",

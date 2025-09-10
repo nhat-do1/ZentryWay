@@ -461,7 +461,7 @@
 					"styleboxWidth": 1,
 					"styleboxHeight": 170,
 					"styleboxPercentWidth": "100%",
-					"enableMosaic": true
+					"enableMosaic": false
 				},
 				"currentElement": ""
 			},
@@ -587,6 +587,9 @@
 					{
 						"type": "paragraph",
 						"children": [
+							{
+								"text": ""
+							},
 							{
 								"type": "datasource",
 								"dsType": "string",
@@ -761,12 +764,12 @@
 				"events": [
 					{
 						"type": "method",
-						"dataclass": "ClientSettings",
+						"dataclass": "ClientSession",
 						"events": [
 							"onchange"
 						],
 						"id": "trdctJQ8WTgVjdWQu359mg",
-						"method": "ClientSettings.setlanguage",
+						"method": "ClientSession.setlanguage",
 						"params": [
 							{
 								"name": "language",
@@ -825,8 +828,8 @@
 						"events": [
 							"onclick"
 						],
-						"id": "r6EikvpDcZwDqKoWkaatom",
-						"method": "$This.emailHost",
+						"id": "3A9aF8KM5WeRa5RK6xQsJL",
+						"method": "$This.notifyHost",
 						"params": [],
 						"namespace": "",
 						"datasource": "hosts",
@@ -835,6 +838,18 @@
 							"type": "Variable"
 						},
 						"feedback": true
+					},
+					{
+						"type": "navigation",
+						"id": "bPzLK8xCsLxhjTAscUKQZL",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "visitor_entry",
+						"isHardCoded": true
 					}
 				],
 				"iconPosition": "top",
