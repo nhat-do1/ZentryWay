@@ -51,12 +51,9 @@ exposed Function notifyHost()
 	If (Not:C34($status.success))
 		throw:C1805(500; "Unable to send email")
 	Else 
-		// save selected host info
+		// save selected host for future use
 		Use (cs:C1710.ClientSession.me)
-			cs:C1710.ClientSession.me.selectedHost:=New shared object:C1526
-			cs:C1710.ClientSession.me.selectedHost.id:=This:C1470.ID
-			cs:C1710.ClientSession.me.selectedHost.firstName:=This:C1470.firstName
-			cs:C1710.ClientSession.me.selectedHost.lastName:=This:C1470.lastName
+			cs:C1710.ClientSession.me.selectedHostID:=This:C1470.ID
 		End use 
 	End if 
 	

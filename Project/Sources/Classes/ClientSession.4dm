@@ -1,6 +1,7 @@
 property language : Text
 property oauthToken : Object
-property selectedHost : Object
+property selectedHostID : Integer
+property guestInfo : Object
 
 shared singleton Class constructor
 	This:C1470.language:="eng"  // default English
@@ -32,5 +33,5 @@ exposed shared Function signInOauth2
 	// retrieve & save token for subsequent requests to Google
 	// initial one-time maunual Gmail sign-in is manadatory
 	$json:=$oAuth2.getToken()
-	$tokenObj:=OB Copy:C1225($json.token; ck shared:K85:29)
+	$tokenObj:=OB Copy:C1225($json.token; ck shared:K85:29; This:C1470.oauthToken)
 	This:C1470.oauthToken:=New shared object:C1526("token"; $tokenObj)

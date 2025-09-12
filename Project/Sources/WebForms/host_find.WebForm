@@ -461,7 +461,7 @@
 					"styleboxWidth": 1,
 					"styleboxHeight": 170,
 					"styleboxPercentWidth": "100%",
-					"enableMosaic": false
+					"enableMosaic": true
 				},
 				"currentElement": ""
 			},

@@ -1,7 +1,36 @@
 {
 	"metadata": {
 		"v": "1.0",
-		"datasources": [],
+		"datasources": [
+			{
+				"id": "input_first",
+				"type": "scalar",
+				"namespace": "",
+				"dataType": "string",
+				"initialValue": ""
+			},
+			{
+				"id": "input_last",
+				"type": "scalar",
+				"namespace": "",
+				"dataType": "string",
+				"initialValue": ""
+			},
+			{
+				"id": "input_cell",
+				"type": "scalar",
+				"namespace": "",
+				"dataType": "string",
+				"initialValue": ""
+			},
+			{
+				"id": "input_mail",
+				"type": "scalar",
+				"namespace": "",
+				"dataType": "string",
+				"initialValue": ""
+			}
+		],
 		"styles": [],
 		"states": []
 	},
@@ -21,7 +50,8 @@
 					"justifyContent": "flex-start",
 					"alignItems": "center",
 					"flexDirection": "column",
-					"gap": "15px"
+					"gap": "15px",
+					"borderColor": "#3b82f6ff"
 				}
 			},
 			"displayName": "Page",
@@ -31,7 +61,11 @@
 			"nodes": [
 				"LnCwikh8iq",
 				"53ALv6sj6z",
-				"1xOZ0SSfXY"
+				"GhoKfNPp0y",
+				"w3W9X2TSCB",
+				"1xOZ0SSfXY",
+				"Mo6tp-BjRV",
+				"R_nYKK6uta"
 			],
 			"linkedNodes": {}
 		},
@@ -297,7 +331,7 @@
 								]
 							},
 							{
-								"text": " that you are here. "
+								"text": " that you are here! "
 							}
 						]
 					},
@@ -305,7 +339,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "They shoud be coming to greet you soon!"
+								"text": "They should be coming to greet you soon."
 							}
 						]
 					},
@@ -321,7 +355,15 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "In the meantime, please tell us about yourself below."
+								"text": "In the meantime, you may proceed with check-in."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Please tell us about yourself below."
 							}
 						]
 					}
@@ -420,8 +462,12 @@
 			"props": {
 				"events": [],
 				"moveable": false,
-				"text": "First Name:",
-				"deletable": true
+				"text": "First Name*:",
+				"deletable": true,
+				"style": {
+					"fontSize": "20px",
+					"marginRight": "0px"
+				}
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -451,7 +497,9 @@
 				"moveable": false,
 				"placeholder": "",
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"datasource": "input_first",
+				"dataType": "string"
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -490,8 +538,12 @@
 			"props": {
 				"events": [],
 				"moveable": false,
-				"text": "Last Name:",
-				"deletable": true
+				"text": "Last Name*:",
+				"deletable": true,
+				"style": {
+					"fontSize": "20px",
+					"marginRight": "0px"
+				}
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -521,7 +573,9 @@
 				"moveable": false,
 				"placeholder": "",
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"datasource": "input_last",
+				"dataType": "string"
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -561,7 +615,11 @@
 				"events": [],
 				"moveable": false,
 				"text": "Cell Phone:",
-				"deletable": true
+				"deletable": true,
+				"style": {
+					"fontSize": "20px",
+					"marginRight": "0px"
+				}
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -591,7 +649,9 @@
 				"moveable": false,
 				"placeholder": "",
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"datasource": "input_cell",
+				"dataType": "string"
 			},
 			"displayName": "Input",
 			"custom": {},
@@ -630,8 +690,12 @@
 			"props": {
 				"events": [],
 				"moveable": false,
-				"text": "Email Addr:",
-				"deletable": true
+				"text": "Email Address:",
+				"deletable": true,
+				"style": {
+					"fontSize": "20px",
+					"marginRight": "0px"
+				}
 			},
 			"displayName": "Label",
 			"custom": {},
@@ -661,11 +725,217 @@
 				"moveable": false,
 				"placeholder": "",
 				"revealPassword": true,
-				"eyePosition": "right"
+				"eyePosition": "right",
+				"datasource": "input_mail",
+				"dataType": "string"
 			},
 			"displayName": "Input",
 			"custom": {},
 			"parent": "ZrSx5IN-NP",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"GhoKfNPp0y": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Visitor Information",
+								"bold": true,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontSize": "24px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"R_nYKK6uta": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Submit",
+				"classNames": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "Guests",
+						"events": [
+							"onclick"
+						],
+						"id": "cGF7pH1QLcdZciBAqGsrEG",
+						"method": "ds.Guests.storeGuestInfo",
+						"params": [
+							{
+								"name": "firstName",
+								"type": "Text",
+								"datasource": "input_first",
+								"id": "eYTEPmo4VkfJXmnNsYXLra"
+							},
+							{
+								"name": "lastName",
+								"type": "Text",
+								"datasource": "input_last",
+								"id": "pQJMePKfK7xpgSNPrcDLE9"
+							},
+							{
+								"name": "phone",
+								"type": "Text",
+								"datasource": "input_cell",
+								"id": "b3bAQ1TswpAHSyX2vD63VC"
+							},
+							{
+								"name": "email",
+								"type": "Text",
+								"datasource": "input_mail",
+								"id": "bHhH7ev5Gv1YUUnTE62QM3"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "res",
+							"type": "Object"
+						},
+						"feedback": true
+					}
+				],
+				"iconPosition": "hidden",
+				"style": {
+					"display": "block",
+					"paddingTop": "8px",
+					"paddingRight": "8px",
+					"paddingBottom": "8px",
+					"paddingLeft": "8px"
+				}
+			},
+			"displayName": "Button",
+			"custom": {
+				"states:c4oxJHTbfXPoMaMNww7iKW": {
+					"text": "Notifica que estás aquí"
+				}
+			},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "SYviFdFRbu"
+			}
+		},
+		"SYviFdFRbu": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-check",
+				"style": {
+					"marginRight": "5px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "R_nYKK6uta",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"Mo6tp-BjRV": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "NOTE: Your email address can be used for quicker check-in next time."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false,
+								"text": "By selecting submit below, you agree to have your information stored in our database. "
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"fontSize": "17px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"w3W9X2TSCB": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "* = Required",
+								"bold": false,
+								"italic": false,
+								"underlined": false,
+								"strikethrough": false
+							}
+						]
+					}
+				],
+				"datasource": ""
+			},
+			"displayName": "Text",
+			"custom": {},
+			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
