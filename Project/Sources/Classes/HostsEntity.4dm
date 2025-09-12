@@ -35,7 +35,7 @@ exposed Function notifyHost()
 	$email.subject:="[ZentryWay] You have a visitor at the front"
 	$email.textBody:="Hi "+This:C1470.firstName+",\n\n"
 	$email.textBody+="Your visitor is currently checking in at the front.\n"
-	$email.textBody+="Please come there to greet them.\n"
+	$email.textBody+="Please meet them there and escort them in.\n"
 	$email.textBody+="(This is an automated message. No need to reply.)\n"
 	$email.from:=$oauthInfo.host_email
 	//$email.to:=This.email

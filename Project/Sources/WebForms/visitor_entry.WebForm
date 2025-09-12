@@ -32,7 +32,29 @@
 			}
 		],
 		"styles": [],
-		"states": []
+		"states": [
+			{
+				"label": "Default",
+				"id": "m5EhEzTmPFCV1eupJPLsaz"
+			},
+			{
+				"label": "Spanish",
+				"id": "2xCB9o2bh7oZQMME24anqC",
+				"conditions": {
+					"id": "hHamfHxVgD5RcdEFUmGn66",
+					"type": "datasource",
+					"name": "condition",
+					"value": "esp",
+					"valueType": "hardCoded",
+					"path": "language:lang_option",
+					"dsType": "string",
+					"op": "eq"
+				}
+			}
+		],
+		"defaultStates": [
+			"m5EhEzTmPFCV1eupJPLsaz"
+		]
 	},
 	"components": {
 		"ROOT": {
@@ -331,7 +353,7 @@
 								]
 							},
 							{
-								"text": " that you are here! "
+								"text": " that you are here. "
 							}
 						]
 					},
@@ -397,6 +419,65 @@
 						}
 					],
 					"datasource": ""
+				},
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Hemos notificado a "
+								},
+								{
+									"type": "datasource",
+									"datasource": "host:hostName",
+									"dsType": "string",
+									"children": [
+										{
+											"text": "host:hostName",
+											"bold": true
+										}
+									]
+								},
+								{
+									"text": " que estás aquí. "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Debería venir a recibirte pronto."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Mientras tanto, puedes continuar con el registro."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Por favor, cuéntanos un poco sobre ti a continuación."
+								}
+							]
+						}
+					],
+					"datasource": "host:hostName"
 				}
 			},
 			"parent": "ROOT",
@@ -470,7 +551,11 @@
 				}
 			},
 			"displayName": "Label",
-			"custom": {},
+			"custom": {
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"text": "Nombre*:"
+				}
+			},
 			"parent": "AsJQAXPSl8",
 			"hidden": false,
 			"nodes": [],
@@ -546,7 +631,11 @@
 				}
 			},
 			"displayName": "Label",
-			"custom": {},
+			"custom": {
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"text": "Apellido*:"
+				}
+			},
 			"parent": "P1E5a614e1",
 			"hidden": false,
 			"nodes": [],
@@ -622,7 +711,11 @@
 				}
 			},
 			"displayName": "Label",
-			"custom": {},
+			"custom": {
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"text": "Celular:"
+				}
+			},
 			"parent": "nMkY_dSX8Z",
 			"hidden": false,
 			"nodes": [],
@@ -698,7 +791,11 @@
 				}
 			},
 			"displayName": "Label",
-			"custom": {},
+			"custom": {
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"text": "Correo electrónico:"
+				}
+			},
 			"parent": "ZrSx5IN-NP",
 			"hidden": false,
 			"nodes": [],
@@ -764,7 +861,25 @@
 				}
 			},
 			"displayName": "Text",
-			"custom": {},
+			"custom": {
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Información del Visitante",
+									"bold": true,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false
+								}
+							]
+						}
+					],
+					"datasource": ""
+				}
+			},
 			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [],
@@ -834,6 +949,9 @@
 			"custom": {
 				"states:c4oxJHTbfXPoMaMNww7iKW": {
 					"text": "Notifica que estás aquí"
+				},
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"text": "Enviar"
 				}
 			},
 			"parent": "ROOT",
@@ -880,7 +998,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "NOTE: Your email address can be used for quicker check-in next time."
+								"text": "NOTE: You can use your email address to check-in faster next time."
 							}
 						]
 					},
@@ -892,7 +1010,7 @@
 								"italic": false,
 								"underlined": false,
 								"strikethrough": false,
-								"text": "By selecting submit below, you agree to have your information stored in our database. "
+								"text": "By selecting submit below, you agree to have your information stored in our system. "
 							}
 						]
 					}
@@ -903,7 +1021,37 @@
 				}
 			},
 			"displayName": "Text",
-			"custom": {},
+			"custom": {
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "NOTA: Puedes usar tu correo electrónico para hacer el registro más rápido la próxima vez."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "Al seleccionar \"Enviar\" a continuación, aceptas que tu información sea almacenada en nuestro sistema. "
+								}
+							]
+						}
+					],
+					"datasource": ""
+				}
+			},
 			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [],
@@ -922,7 +1070,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "* = Required",
+								"text": "* = Required field",
 								"bold": false,
 								"italic": false,
 								"underlined": false,
@@ -934,7 +1082,25 @@
 				"datasource": ""
 			},
 			"displayName": "Text",
-			"custom": {},
+			"custom": {
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "* = Campo obligatorio",
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false
+								}
+							]
+						}
+					],
+					"datasource": ""
+				}
+			},
 			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [],
