@@ -397,7 +397,7 @@
 					"fontSize": "24px",
 					"marginTop": "0px",
 					"marginRight": "0px",
-					"marginBottom": "0px",
+					"marginBottom": "15px",
 					"marginLeft": "0px"
 				}
 			},
@@ -938,6 +938,18 @@
 							"type": "Object"
 						},
 						"feedback": true
+					},
+					{
+						"type": "navigation",
+						"id": "xf7pXUv4poEtEMJCtQrShe",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "doc_view",
+						"isHardCoded": true
 					}
 				],
 				"iconPosition": "hidden",
