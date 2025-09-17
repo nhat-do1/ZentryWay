@@ -12,6 +12,23 @@ exposed shared Function setlanguage($language : Text)
 exposed Function getLanguage()->$language : Text
 	$language:=This:C1470.language
 	
+exposed Function getDocumentPath()->$path : Text
+	$path:="http://127.0.0.1:8089/"
+	$language:=cs:C1710.ClientSession.me.language
+	
+	Case of 
+		: ($language="eng")
+			$path+="visitor_nda_eng.pdf"
+			
+		: ($language="esp")
+			$path+="visitor_nda_esp.pdf"
+			
+		Else 
+			$path+="visitor_nda_eng.pdf"
+			
+	End case 
+	
+	
 exposed shared Function signInOauth2
 	var $oAuth2 : cs:C1710.NetKit.OAuth2Provider
 	

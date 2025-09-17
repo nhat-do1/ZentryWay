@@ -7,10 +7,77 @@
 				"type": "scalar",
 				"namespace": "",
 				"dataType": "string",
-				"initialValue": "http://127.0.0.1:8089/visitor_nda.pdf"
+				"initialValue": "",
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "ClientSession",
+						"events": [
+							"onInit"
+						],
+						"id": "6HhhUHphFgeCC3YsVrK2g9",
+						"method": "ClientSession.getDocumentPath",
+						"params": [],
+						"datasource": "",
+						"methodType": "singleton",
+						"returns": {
+							"name": "path",
+							"type": "Text",
+							"datasource": "pdf_source"
+						}
+					}
+				]
+			},
+			{
+				"id": "agree_checked",
+				"type": "scalar",
+				"namespace": "",
+				"dataType": "bool",
+				"initialValue": false
 			}
 		],
-		"styles": []
+		"styles": [],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "Default",
+				"id": "qHgPpwBEgxA1P1Yys2uyZ4"
+			},
+			{
+				"label": "User_Agreed",
+				"id": "eEbJM9qLzKrCoWR8p4yycJ",
+				"conditions": {
+					"id": "nvroxHjY5uZq51bDVhR2e4",
+					"type": "datasource",
+					"name": "condition",
+					"value": "",
+					"valueType": "hardCoded",
+					"path": "agree_checked",
+					"dsType": "bool",
+					"op": "istrue"
+				}
+			},
+			{
+				"label": "Spanish",
+				"id": "18AASfUVV5ycWTj6ndktmp",
+				"conditions": {
+					"id": "j5xRCiEmRf4wSj1XBkqxXp",
+					"type": "datasource",
+					"name": "condition",
+					"value": "esp",
+					"valueType": "hardCoded",
+					"path": "language:lang_option",
+					"dsType": "string",
+					"op": "eq"
+				}
+			}
+		],
+		"defaultStates": [
+			"qHgPpwBEgxA1P1Yys2uyZ4"
+		]
 	},
 	"components": {
 		"ROOT": {
@@ -28,7 +95,7 @@
 					"flexDirection": "column",
 					"justifyContent": "flex-start",
 					"alignItems": "center",
-					"gap": "5px"
+					"gap": "15px"
 				}
 			},
 			"displayName": "Page",
@@ -38,7 +105,9 @@
 			"nodes": [
 				"ALCVzibv7L",
 				"f988o_0JuW",
-				"eQgGr4AXTJ"
+				"eQgGr4AXTJ",
+				"pZB1RFbtXS",
+				"t2niIqpLZW"
 			],
 			"linkedNodes": {}
 		},
@@ -248,6 +317,23 @@
 							"name": "result",
 							"type": "Variable"
 						}
+					},
+					{
+						"type": "method",
+						"dataclass": "ClientSession",
+						"events": [
+							"onchange"
+						],
+						"id": "iihU3hwfQ6pgiwcVy9UVZ1",
+						"method": "ClientSession.getDocumentPath",
+						"params": [],
+						"datasource": "",
+						"methodType": "singleton",
+						"returns": {
+							"name": "path",
+							"type": "Text",
+							"datasource": "pdf_source"
+						}
 					}
 				],
 				"deletable": false,
@@ -290,7 +376,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Please read the following document and select an option below:"
+								"text": "Please read the following document(s) and then select an option below:"
 							}
 						]
 					}
@@ -383,6 +469,19 @@
 						}
 					],
 					"datasource": "host:hostName"
+				},
+				"states:18AASfUVV5ycWTj6ndktmp": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Por favor lea el siguiente documento y luego seleccione una opción a continuación."
+								}
+							]
+						}
+					],
+					"datasource": ""
 				}
 			},
 			"parent": "ROOT",
@@ -408,6 +507,144 @@
 			"displayName": "PdfViewer",
 			"custom": {},
 			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"pZB1RFbtXS": {
+			"type": {
+				"resolvedName": "Checkbox"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"label": "label",
+				"variant": "checkbox",
+				"type": "two-state",
+				"size": "lg",
+				"labelPosition": "right",
+				"iterableChild": true
+			},
+			"displayName": "CheckBox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "yC95ef2TuY",
+				"CheckboxInput": "1_91MptXUB"
+			}
+		},
+		"yC95ef2TuY": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"moveable": false,
+				"htmlfor": "pZB1RFbtXS",
+				"text": "I have read the above document(s) and I agree to all of the stipulations specified.",
+				"style": {
+					"fontSize": "18px"
+				},
+				"deletable": true
+			},
+			"displayName": "Label",
+			"custom": {
+				"states:18AASfUVV5ycWTj6ndktmp": {
+					"text": "He leído el documento anterior y acepto todas las estipulaciones especificadas."
+				}
+			},
+			"parent": "pZB1RFbtXS",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"1_91MptXUB": {
+			"type": {
+				"resolvedName": "CheckboxInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"deletable": false,
+				"style": {
+					"borderColor": "#3b82f6ff",
+					"borderWidth": "2px"
+				},
+				"datasource": "agree_checked",
+				"iterableChild": true
+			},
+			"displayName": "Checkbox Input",
+			"custom": {},
+			"parent": "pZB1RFbtXS",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"t2niIqpLZW": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Continue",
+				"classNames": [],
+				"events": [],
+				"iconPosition": "hidden",
+				"style": {
+					"display": "block",
+					"paddingTop": "8px",
+					"paddingRight": "8px",
+					"paddingBottom": "8px",
+					"paddingLeft": "8px",
+					"width": "90px"
+				},
+				"disabled": true
+			},
+			"displayName": "Button",
+			"custom": {
+				"states:c4oxJHTbfXPoMaMNww7iKW": {
+					"text": "Notifica que estás aquí"
+				},
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"text": "Enviar"
+				},
+				"states:eEbJM9qLzKrCoWR8p4yycJ": {
+					"disabled": false
+				},
+				"states:18AASfUVV5ycWTj6ndktmp": {
+					"text": "Continuar",
+					"style": {
+						"width": "99px"
+					}
+				}
+			},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "47huYqXkez"
+			}
+		},
+		"47huYqXkez": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-check",
+				"style": {
+					"marginRight": "5px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "t2niIqpLZW",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
