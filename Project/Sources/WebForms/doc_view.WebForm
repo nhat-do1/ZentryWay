@@ -36,7 +36,15 @@
 				"initialValue": false
 			}
 		],
-		"styles": [],
+		"styles": [
+			{
+				"name": "user-agreement-check",
+				"content": "self .chakra-checkbox span[data-checked]{\n  background: rgb(0, 202, 40);\n  color: white;\n}",
+				"parentId": null,
+				"scope": "local",
+				"id": "QbbsQt2hPU5RnJLEKDOxx"
+			}
+		],
 		"states": [
 			{
 				"label": "Base",
@@ -376,7 +384,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Please read the following document(s) and then select an option below:"
+								"text": "Please read the following document and then select an option below:"
 							}
 						]
 					}
@@ -476,7 +484,7 @@
 							"type": "paragraph",
 							"children": [
 								{
-									"text": "Por favor lea el siguiente documento y luego seleccione una opción a continuación."
+									"text": "Por favor lea el siguiente documento y luego seleccione una opción a continuación:"
 								}
 							]
 						}
@@ -523,7 +531,10 @@
 				"type": "two-state",
 				"size": "lg",
 				"labelPosition": "right",
-				"iterableChild": true
+				"iterableChild": true,
+				"classNames": [
+					"user-agreement-check"
+				]
 			},
 			"displayName": "CheckBox",
 			"custom": {},
@@ -544,7 +555,7 @@
 				"events": [],
 				"moveable": false,
 				"htmlfor": "pZB1RFbtXS",
-				"text": "I have read the above document(s) and I agree to all of the stipulations specified.",
+				"text": "I have read the above document and I agree to all of the stipulations specified.",
 				"style": {
 					"fontSize": "18px"
 				},
