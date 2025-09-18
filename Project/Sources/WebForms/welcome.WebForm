@@ -523,7 +523,7 @@
 				"events": [],
 				"iterableChild": true,
 				"style": {
-					"marginTop": "250px"
+					"marginTop": "150px"
 				}
 			},
 			"displayName": "Stylebox",
