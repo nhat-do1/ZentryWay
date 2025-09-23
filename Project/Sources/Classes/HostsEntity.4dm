@@ -38,12 +38,12 @@ exposed Function notifyHost()
 	$email.textBody+="Please meet them there and escort them in.\n"
 	$email.textBody+="(This is an automated message. No need to reply.)\n"
 	$email.from:=$oauthInfo.host_email
-	//$email.to:=This.email
-	// testing
+	
 	If (This:C1470.ID#9)
+		// testing
 		$email.to:=$oauthInfo.test_email
 	Else 
-		$email.to:=$oauthInfo.other_test_email
+		$email.to:=This:C1470.email
 	End if 
 	
 	$status:=$google.mail.send($email)
