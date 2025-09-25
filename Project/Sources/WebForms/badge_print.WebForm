@@ -1,91 +1,8 @@
 {
 	"metadata": {
 		"v": "1.0",
-		"datasources": [
-			{
-				"id": "pdf_source",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "string",
-				"initialValue": "",
-				"events": [
-					{
-						"type": "method",
-						"dataclass": "ClientSession",
-						"events": [
-							"onInit"
-						],
-						"id": "6HhhUHphFgeCC3YsVrK2g9",
-						"method": "ClientSession.getDocumentPath",
-						"params": [],
-						"datasource": "",
-						"methodType": "singleton",
-						"returns": {
-							"name": "path",
-							"type": "Text",
-							"datasource": "pdf_source"
-						}
-					}
-				]
-			},
-			{
-				"id": "agree_checked",
-				"type": "scalar",
-				"namespace": "",
-				"dataType": "bool",
-				"initialValue": false
-			}
-		],
-		"styles": [
-			{
-				"name": "user-agreement-check",
-				"content": "self .chakra-checkbox span[data-checked]{\n  background: rgb(0, 202, 40);\n  color: white;\n}",
-				"parentId": null,
-				"scope": "local",
-				"id": "QbbsQt2hPU5RnJLEKDOxx"
-			}
-		],
-		"states": [
-			{
-				"label": "Base",
-				"id": "root"
-			},
-			{
-				"label": "Default",
-				"id": "qHgPpwBEgxA1P1Yys2uyZ4"
-			},
-			{
-				"label": "User_Agreed",
-				"id": "eEbJM9qLzKrCoWR8p4yycJ",
-				"conditions": {
-					"id": "nvroxHjY5uZq51bDVhR2e4",
-					"type": "datasource",
-					"name": "condition",
-					"value": "",
-					"valueType": "hardCoded",
-					"path": "agree_checked",
-					"dsType": "bool",
-					"op": "istrue"
-				}
-			},
-			{
-				"label": "Spanish",
-				"id": "18AASfUVV5ycWTj6ndktmp",
-				"conditions": {
-					"id": "j5xRCiEmRf4wSj1XBkqxXp",
-					"type": "datasource",
-					"name": "condition",
-					"value": "esp",
-					"valueType": "hardCoded",
-					"path": "language:lang_option",
-					"dsType": "string",
-					"op": "eq"
-				}
-			}
-		],
-		"defaultStates": [
-			"qHgPpwBEgxA1P1Yys2uyZ4"
-		]
+		"datasources": [],
+		"styles": []
 	},
 	"components": {
 		"ROOT": {
@@ -101,7 +18,6 @@
 				"style": {
 					"display": "flex",
 					"flexDirection": "column",
-					"justifyContent": "flex-start",
 					"alignItems": "center",
 					"gap": "15px"
 				}
@@ -111,15 +27,13 @@
 			"parent": "",
 			"hidden": false,
 			"nodes": [
-				"ALCVzibv7L",
-				"f988o_0JuW",
-				"eQgGr4AXTJ",
-				"pZB1RFbtXS",
-				"t2niIqpLZW"
+				"cvo4ZnrBnE",
+				"RPhckLpXQO",
+				"JF0d_GJSUU"
 			],
 			"linkedNodes": {}
 		},
-		"ALCVzibv7L": {
+		"cvo4ZnrBnE": {
 			"type": {
 				"resolvedName": "StyleBox"
 			},
@@ -138,12 +52,12 @@
 			"parent": "ROOT",
 			"hidden": false,
 			"nodes": [
-				"aEQsTLZzFH",
-				"YwsrL0PAZJ"
+				"UZW5h6fXOk",
+				"zadINgNkGO"
 			],
 			"linkedNodes": {}
 		},
-		"aEQsTLZzFH": {
+		"UZW5h6fXOk": {
 			"type": {
 				"resolvedName": "Button"
 			},
@@ -161,7 +75,7 @@
 						"externalLink": false,
 						"loader": "",
 						"parent": "same-tab",
-						"target": "visitor_entry",
+						"target": "doc_view",
 						"isHardCoded": true
 					}
 				],
@@ -180,14 +94,14 @@
 			},
 			"displayName": "Button",
 			"custom": {},
-			"parent": "ALCVzibv7L",
+			"parent": "cvo4ZnrBnE",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {
-				"icon": "HgAG89OvsC"
+				"icon": "XJCfdFjcM2"
 			}
 		},
-		"HgAG89OvsC": {
+		"XJCfdFjcM2": {
 			"type": {
 				"resolvedName": "Icon"
 			},
@@ -204,12 +118,12 @@
 			},
 			"displayName": "Icon",
 			"custom": {},
-			"parent": "aEQsTLZzFH",
+			"parent": "UZW5h6fXOk",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"YwsrL0PAZJ": {
+		"zadINgNkGO": {
 			"type": {
 				"resolvedName": "StyleBox"
 			},
@@ -226,15 +140,15 @@
 			},
 			"displayName": "Stylebox",
 			"custom": {},
-			"parent": "ALCVzibv7L",
+			"parent": "cvo4ZnrBnE",
 			"hidden": false,
 			"nodes": [
-				"vCFB_Ommr4",
-				"MU2YwuLvw2"
+				"lUZUR-ftE1",
+				"0vdsCehvga"
 			],
 			"linkedNodes": {}
 		},
-		"vCFB_Ommr4": {
+		"lUZUR-ftE1": {
 			"type": {
 				"resolvedName": "Icon"
 			},
@@ -249,12 +163,12 @@
 			},
 			"displayName": "Icon",
 			"custom": {},
-			"parent": "YwsrL0PAZJ",
+			"parent": "zadINgNkGO",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"MU2YwuLvw2": {
+		"0vdsCehvga": {
 			"type": {
 				"resolvedName": "SelectInput"
 			},
@@ -270,15 +184,15 @@
 			},
 			"displayName": "Select input",
 			"custom": {},
-			"parent": "YwsrL0PAZJ",
+			"parent": "zadINgNkGO",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {
-				"label": "2Vh-rEHN2z",
-				"select": "tBoQ3UDGM_"
+				"label": "3RYsS9yy7r",
+				"select": "QCf3t2ZVoR"
 			}
 		},
-		"2Vh-rEHN2z": {
+		"3RYsS9yy7r": {
 			"type": {
 				"resolvedName": "Label"
 			},
@@ -291,12 +205,12 @@
 			},
 			"displayName": "Label",
 			"custom": {},
-			"parent": "MU2YwuLvw2",
+			"parent": "0vdsCehvga",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"tBoQ3UDGM_": {
+		"QCf3t2ZVoR": {
 			"type": {
 				"resolvedName": "Select"
 			},
@@ -325,23 +239,6 @@
 							"name": "result",
 							"type": "Variable"
 						}
-					},
-					{
-						"type": "method",
-						"dataclass": "ClientSession",
-						"events": [
-							"onchange"
-						],
-						"id": "iihU3hwfQ6pgiwcVy9UVZ1",
-						"method": "ClientSession.getDocumentPath",
-						"params": [],
-						"datasource": "",
-						"methodType": "singleton",
-						"returns": {
-							"name": "path",
-							"type": "Text",
-							"datasource": "pdf_source"
-						}
 					}
 				],
 				"deletable": false,
@@ -366,12 +263,12 @@
 			},
 			"displayName": "Select",
 			"custom": {},
-			"parent": "MU2YwuLvw2",
+			"parent": "0vdsCehvga",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"f988o_0JuW": {
+		"RPhckLpXQO": {
 			"type": {
 				"resolvedName": "Text"
 			},
@@ -384,7 +281,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Please read the following document and then select an option below:"
+								"text": "Let's take a picture for your visitor's badge:"
 							}
 						]
 					}
@@ -497,178 +394,32 @@
 			"nodes": [],
 			"linkedNodes": {}
 		},
-		"eQgGr4AXTJ": {
+		"JF0d_GJSUU": {
 			"type": {
-				"resolvedName": "PdfViewer"
+				"resolvedName": "WebCam"
 			},
 			"isCanvas": false,
 			"props": {
 				"name": "",
 				"classNames": [],
 				"events": [],
-				"datasource": "pdf_source",
+				"mirrored": false,
+				"uploadPictures": false,
+				"screenshotQuality": 1,
+				"cameraWidth": 1920,
+				"cameraHeight": 1080,
 				"style": {
-					"width": "60%",
-					"height": "70%"
+					"width": "450px",
+					"height": "300px",
+					"backgroundColor": "rgb(243 244 246)",
+					"borderRadius": "0.5rem",
+					"borderWidth": "1px",
+					"borderColor": "rgb(209 213 219)"
 				}
 			},
-			"displayName": "PdfViewer",
+			"displayName": "WebCam",
 			"custom": {},
 			"parent": "ROOT",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"pZB1RFbtXS": {
-			"type": {
-				"resolvedName": "Checkbox"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"label": "label",
-				"variant": "checkbox",
-				"type": "two-state",
-				"size": "lg",
-				"labelPosition": "right",
-				"iterableChild": true,
-				"classNames": [
-					"user-agreement-check"
-				]
-			},
-			"displayName": "CheckBox",
-			"custom": {},
-			"parent": "ROOT",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {
-				"label": "yC95ef2TuY",
-				"CheckboxInput": "1_91MptXUB"
-			}
-		},
-		"yC95ef2TuY": {
-			"type": {
-				"resolvedName": "Label"
-			},
-			"isCanvas": false,
-			"props": {
-				"events": [],
-				"moveable": false,
-				"htmlfor": "pZB1RFbtXS",
-				"text": "I have read the above document and I agree to all of the stipulations specified.",
-				"style": {
-					"fontSize": "18px"
-				},
-				"deletable": true
-			},
-			"displayName": "Label",
-			"custom": {
-				"states:18AASfUVV5ycWTj6ndktmp": {
-					"text": "He leído el documento anterior y acepto todas las estipulaciones especificadas."
-				}
-			},
-			"parent": "pZB1RFbtXS",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"1_91MptXUB": {
-			"type": {
-				"resolvedName": "CheckboxInput"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"deletable": false,
-				"style": {
-					"borderColor": "#3b82f6ff",
-					"borderWidth": "2px"
-				},
-				"datasource": "agree_checked",
-				"iterableChild": true
-			},
-			"displayName": "Checkbox Input",
-			"custom": {},
-			"parent": "pZB1RFbtXS",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {}
-		},
-		"t2niIqpLZW": {
-			"type": {
-				"resolvedName": "Button"
-			},
-			"isCanvas": false,
-			"props": {
-				"text": "Continue",
-				"classNames": [],
-				"events": [
-					{
-						"type": "navigation",
-						"id": "wGEToaG4ChvtuhntMRPmQ1",
-						"events": [
-							"onclick"
-						],
-						"externalLink": false,
-						"loader": "",
-						"parent": "same-tab",
-						"target": "badge_print",
-						"isHardCoded": true
-					}
-				],
-				"iconPosition": "hidden",
-				"style": {
-					"display": "block",
-					"paddingTop": "8px",
-					"paddingRight": "8px",
-					"paddingBottom": "8px",
-					"paddingLeft": "8px",
-					"width": "90px"
-				},
-				"disabled": true
-			},
-			"displayName": "Button",
-			"custom": {
-				"states:c4oxJHTbfXPoMaMNww7iKW": {
-					"text": "Notifica que estás aquí"
-				},
-				"states:2xCB9o2bh7oZQMME24anqC": {
-					"text": "Enviar"
-				},
-				"states:eEbJM9qLzKrCoWR8p4yycJ": {
-					"disabled": false
-				},
-				"states:18AASfUVV5ycWTj6ndktmp": {
-					"text": "Continuar",
-					"style": {
-						"width": "99px"
-					}
-				}
-			},
-			"parent": "ROOT",
-			"hidden": false,
-			"nodes": [],
-			"linkedNodes": {
-				"icon": "47huYqXkez"
-			}
-		},
-		"47huYqXkez": {
-			"type": {
-				"resolvedName": "Icon"
-			},
-			"isCanvas": false,
-			"props": {
-				"classNames": [],
-				"events": [],
-				"icon": "fa-solid fa-check",
-				"style": {
-					"marginRight": "5px"
-				}
-			},
-			"displayName": "Icon",
-			"custom": {},
-			"parent": "t2niIqpLZW",
 			"hidden": false,
 			"nodes": [],
 			"linkedNodes": {}

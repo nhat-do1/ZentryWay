@@ -11,5 +11,18 @@
 		"module": "components",
 		"remoteEntryFileName": "components.js",
 		"url": "/$shared/CustomComponents/qodly_5ce8a02fb01d4eb57667/"
+	},
+	{
+		"name": "qodly_webcam",
+		"version": "0.7.0",
+		"scope": "qodly_b6e080fa86a3580e4021",
+		"author": {
+			"name": "Qodly Team",
+			"email": "contact@qodly.com",
+			"url": "https://qodly.com"
+		},
+		"module": "components",
+		"remoteEntryFileName": "components.js",
+		"url": "/$shared/CustomComponents/qodly_b6e080fa86a3580e4021/"
 	}
 ]
