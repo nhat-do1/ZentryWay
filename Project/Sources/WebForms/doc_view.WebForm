@@ -613,7 +613,7 @@
 						"externalLink": false,
 						"loader": "",
 						"parent": "same-tab",
-						"target": "badge_print",
+						"target": "photo_take",
 						"isHardCoded": true
 					}
 				],

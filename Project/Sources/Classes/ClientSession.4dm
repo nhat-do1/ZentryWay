@@ -28,6 +28,12 @@ exposed Function getDocumentPath()->$path : Text
 			
 	End case 
 	
+exposed Function createGuestEntity()->$guest : 4D:C1709.Entity
+	$guest:=ds:C1482.Guests.new()
+	$guest.email:=This:C1470.guestInfo.email
+	$guest.firstName:=This:C1470.guestInfo.firstName
+	$guest.lastName:=This:C1470.guestInfo.lastName
+	$guest.phone:=This:C1470.guestInfo.phone
 	
 exposed shared Function signInOauth2
 	var $oAuth2 : cs:C1710.NetKit.OAuth2Provider
