@@ -489,7 +489,7 @@
 					"alignItems": "center",
 					"width": "45%",
 					"height": "80%",
-					"borderRadius": "10px",
+					"borderRadius": "5px",
 					"backgroundColor": "#ffffffff"
 				},
 				"closable": false
