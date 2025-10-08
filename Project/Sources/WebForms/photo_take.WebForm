@@ -779,7 +779,7 @@
 				"iconPosition": "top",
 				"style": {
 					"display": "flex",
-					"backgroundColor": "#29db25ff",
+					"backgroundColor": "#3b82f6ff",
 					"fontSize": "28px",
 					"fontWeight": "500",
 					"width": "35%",
