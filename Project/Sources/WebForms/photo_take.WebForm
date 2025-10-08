@@ -462,7 +462,7 @@
 					"backgroundColor": "rgb(243 244 246)",
 					"borderRadius": "0.5rem",
 					"borderWidth": "1px",
-					"borderColor": "rgb(209 213 219)"
+					"borderColor": "#9f9e9ec9"
 				},
 				"datasource": "current_guest.pic"
 			},
@@ -517,7 +517,7 @@
 					"flexDirection": "column",
 					"alignItems": "center",
 					"gap": "10px",
-					"marginTop": "0px",
+					"marginTop": "15px",
 					"backgroundColor": "#ffffffff",
 					"borderColor": "#ffffffff"
 				},
