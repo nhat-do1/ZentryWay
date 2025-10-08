@@ -858,7 +858,8 @@
 					"paddingTop": "8px",
 					"paddingRight": "8px",
 					"paddingBottom": "8px",
-					"paddingLeft": "8px"
+					"paddingLeft": "8px",
+					"fontWeight": "500"
 				}
 			},
 			"displayName": "Button",

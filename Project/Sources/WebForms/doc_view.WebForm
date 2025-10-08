@@ -557,7 +557,8 @@
 				"htmlfor": "pZB1RFbtXS",
 				"text": "I have read the above document and I agree to all of the stipulations specified.",
 				"style": {
-					"fontSize": "18px"
+					"fontSize": "18px",
+					"fontWeight": "700"
 				},
 				"deletable": true
 			},
@@ -624,7 +625,8 @@
 					"paddingRight": "8px",
 					"paddingBottom": "8px",
 					"paddingLeft": "8px",
-					"width": "90px"
+					"width": "90px",
+					"fontWeight": "500"
 				},
 				"disabled": true
 			},
