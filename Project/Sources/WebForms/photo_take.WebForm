@@ -18,6 +18,33 @@
 				"scope": "local",
 				"id": "MdruDOzLal-QIPVKMtuJZ"
 			}
+		],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "Default",
+				"id": "sXTwLWuE2iQyWn8CWhFosa"
+			},
+			{
+				"label": "Spanish",
+				"id": "9nmWFbpqwMe1qRWUqChLDC",
+				"conditions": {
+					"id": "8cnQu1dRhi5Y2xKczzzFTW",
+					"type": "datasource",
+					"name": "condition",
+					"value": "esp",
+					"valueType": "hardCoded",
+					"path": "language:lang_option",
+					"dsType": "string",
+					"op": "eq"
+				}
+			}
+		],
+		"defaultStates": [
+			"sXTwLWuE2iQyWn8CWhFosa"
 		]
 	},
 	"components": {
@@ -423,6 +450,19 @@
 						}
 					],
 					"datasource": ""
+				},
+				"states:9nmWFbpqwMe1qRWUqChLDC": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Vamos a tomar una foto para tu gafete de visitante:"
+								}
+							]
+						}
+					],
+					"datasource": ""
 				}
 			},
 			"parent": "ROOT",
@@ -718,7 +758,7 @@
 			},
 			"isCanvas": false,
 			"props": {
-				"text": "Re-Take Photo",
+				"text": "Re-take photo",
 				"classNames": [],
 				"events": [
 					{
@@ -742,7 +782,11 @@
 				}
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:9nmWFbpqwMe1qRWUqChLDC": {
+					"text": "Repetir foto"
+				}
+			},
 			"parent": "PU27YTarEh",
 			"hidden": false,
 			"nodes": [],
@@ -773,7 +817,7 @@
 			},
 			"isCanvas": false,
 			"props": {
-				"text": "Use This Photo",
+				"text": "Use this photo",
 				"classNames": [],
 				"events": [],
 				"iconPosition": "top",
@@ -787,7 +831,11 @@
 				}
 			},
 			"displayName": "Button",
-			"custom": {},
+			"custom": {
+				"states:9nmWFbpqwMe1qRWUqChLDC": {
+					"text": "Usar esta foto"
+				}
+			},
 			"parent": "PU27YTarEh",
 			"hidden": false,
 			"nodes": [],
