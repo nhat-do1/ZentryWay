@@ -1,6 +1,6 @@
-shared singleton Class constructor
+session singleton Class constructor
 	
-exposed shared Function setlanguage($language : Text)
+exposed Function setlanguage($language : Text)
 	Use (Session:C1714.storage.client)
 		Session:C1714.storage.client.language:=$language
 	End use 
@@ -24,7 +24,7 @@ exposed Function getDocumentPath()->$path : Text
 			
 	End case 
 	
-exposed shared Function signInOauth2
+exposed Function signInOauth2
 	var $oAuth2 : cs:C1710.NetKit.OAuth2Provider
 	
 	// build auth info obj
