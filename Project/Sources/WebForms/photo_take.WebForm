@@ -818,7 +818,43 @@
 			"props": {
 				"text": "Use this photo",
 				"classNames": [],
-				"events": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "Guests",
+						"events": [
+							"onclick"
+						],
+						"id": "2dt4iqoiLY6ZtvSRY47fgw",
+						"method": "ds.Guests.saveGuestEntity",
+						"params": [
+							{
+								"name": "guest",
+								"type": "Variant",
+								"datasource": "current_guest",
+								"id": "sjMMvwVJemCeYKyKyF1izw"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						},
+						"feedback": true
+					},
+					{
+						"type": "navigation",
+						"id": "aopiiM8riHKjmjL9pMGKoQ",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "checkin_finish",
+						"isHardCoded": true
+					}
+				],
 				"iconPosition": "top",
 				"style": {
 					"display": "flex",

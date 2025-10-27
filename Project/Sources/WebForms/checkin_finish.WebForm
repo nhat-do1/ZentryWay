@@ -1,0 +1,493 @@
+{
+	"metadata": {
+		"v": "1.0",
+		"datasources": [],
+		"styles": []
+	},
+	"components": {
+		"ROOT": {
+			"type": {
+				"resolvedName": "Container"
+			},
+			"isCanvas": true,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"airyMode": false,
+				"className": "bg-white h-full w-full px-6",
+				"style": {
+					"display": "flex",
+					"flexDirection": "column",
+					"alignItems": "center",
+					"justifyContent": "flex-start",
+					"gap": "20px"
+				}
+			},
+			"displayName": "Page",
+			"custom": {},
+			"parent": "",
+			"hidden": false,
+			"nodes": [
+				"Ur6xV2rNY5",
+				"euXc_LiEQG",
+				"qLm1t7Ey8o"
+			],
+			"linkedNodes": {}
+		},
+		"euXc_LiEQG": {
+			"type": {
+				"resolvedName": "Text"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"doc": [
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Your badge should be printed out in a moment."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Thank you for checking in with ZentryWay."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": ""
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Confirm your check-in by selecting the button below."
+							}
+						]
+					},
+					{
+						"type": "paragraph",
+						"children": [
+							{
+								"text": "Then, please wait for your host to escort you inside."
+							}
+						]
+					}
+				],
+				"datasource": "",
+				"style": {
+					"textAlign": "start",
+					"fontWeight": "500",
+					"fontSize": "24px",
+					"marginTop": "0px",
+					"marginRight": "0px",
+					"marginBottom": "0px",
+					"marginLeft": "0px"
+				}
+			},
+			"displayName": "Text",
+			"custom": {
+				"states:c4oxJHTbfXPoMaMNww7iKW": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"bold": false,
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "¿A quién vienes a visitar?"
+								}
+							]
+						}
+					],
+					"datasource": ""
+				},
+				"states:2xCB9o2bh7oZQMME24anqC": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Hemos notificado a "
+								},
+								{
+									"type": "datasource",
+									"datasource": "host:hostName",
+									"dsType": "string",
+									"children": [
+										{
+											"text": "host:hostName",
+											"bold": true
+										}
+									]
+								},
+								{
+									"text": " que estás aquí. "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Debería venir a recibirte pronto."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Mientras tanto, puedes continuar con el registro."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Por favor, cuéntanos un poco sobre ti a continuación."
+								}
+							]
+						}
+					],
+					"datasource": "host:hostName"
+				},
+				"states:18AASfUVV5ycWTj6ndktmp": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Por favor lea el siguiente documento y luego seleccione una opción a continuación:"
+								}
+							]
+						}
+					],
+					"datasource": ""
+				}
+			},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"Ur6xV2rNY5": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"justifyContent": "space-between",
+					"alignItems": "center"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [
+				"4_HexXkCPW",
+				"mRPirDlDur"
+			],
+			"linkedNodes": {}
+		},
+		"4_HexXkCPW": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "",
+				"classNames": [],
+				"events": [
+					{
+						"type": "navigation",
+						"id": "568pYyWUXVqf1MiL1eNoeD",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "photo_take",
+						"isHardCoded": true
+					}
+				],
+				"iconPosition": "left",
+				"style": {
+					"display": "flex",
+					"height": "40px",
+					"width": "40px",
+					"marginTop": "0px",
+					"borderRadius": "100px",
+					"fontWeight": "500",
+					"fontFamily": "Arial",
+					"marginLeft": "0px",
+					"fontSize": "30px"
+				}
+			},
+			"displayName": "Button",
+			"custom": {},
+			"parent": "Ur6xV2rNY5",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "Xtrf3oq-tz"
+			}
+		},
+		"Xtrf3oq-tz": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-arrow-left",
+				"style": {
+					"width": "24px",
+					"height": "18px",
+					"paddingTop": "10px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "4_HexXkCPW",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"mRPirDlDur": {
+			"type": {
+				"resolvedName": "StyleBox"
+			},
+			"isCanvas": true,
+			"props": {
+				"events": [],
+				"iterableChild": true,
+				"style": {
+					"display": "flex",
+					"alignItems": "center",
+					"justifyContent": "flex-end",
+					"width": "200px"
+				}
+			},
+			"displayName": "Stylebox",
+			"custom": {},
+			"parent": "Ur6xV2rNY5",
+			"hidden": false,
+			"nodes": [
+				"NFYKR4-4jU",
+				"KbwJvKFVIz"
+			],
+			"linkedNodes": {}
+		},
+		"NFYKR4-4jU": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-globe",
+				"style": {
+					"marginRight": "2px"
+				}
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "mRPirDlDur",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"KbwJvKFVIz": {
+			"type": {
+				"resolvedName": "SelectInput"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"placeholder": "placeholder",
+				"label": "label",
+				"labelPosition": "hidden",
+				"style": {
+					"width": "90px"
+				}
+			},
+			"displayName": "Select input",
+			"custom": {},
+			"parent": "mRPirDlDur",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"label": "JYdh4IZ0Ul",
+				"select": "I8-4YQ3uW7"
+			}
+		},
+		"JYdh4IZ0Ul": {
+			"type": {
+				"resolvedName": "Label"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [],
+				"moveable": false,
+				"deletable": true,
+				"text": ""
+			},
+			"displayName": "Label",
+			"custom": {},
+			"parent": "KbwJvKFVIz",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"I8-4YQ3uW7": {
+			"type": {
+				"resolvedName": "Select"
+			},
+			"isCanvas": false,
+			"props": {
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "ClientSession",
+						"events": [
+							"onchange"
+						],
+						"id": "trdctJQ8WTgVjdWQu359mg",
+						"method": "ClientSession.setlanguage",
+						"params": [
+							{
+								"name": "language",
+								"type": "Text",
+								"datasource": "language:lang_option",
+								"id": "7JMgtu4CBvvrjueziAMhym"
+							}
+						],
+						"datasource": "",
+						"methodType": "singleton",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						}
+					}
+				],
+				"deletable": false,
+				"className": "fd-select",
+				"moveable": false,
+				"options": [
+					{
+						"label": "English",
+						"value": "eng",
+						"id": "kdSoHU9V49dZafcDs6krz3"
+					},
+					{
+						"label": "Español",
+						"value": "esp",
+						"id": "qcqxsDf9LEyHy7HsDraBjA"
+					}
+				],
+				"showEmptyOption": false,
+				"defaultValue": "eng",
+				"datasource": "language:lang_option",
+				"serverSideRef": ""
+			},
+			"displayName": "Select",
+			"custom": {},
+			"parent": "KbwJvKFVIz",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		},
+		"qLm1t7Ey8o": {
+			"type": {
+				"resolvedName": "Button"
+			},
+			"isCanvas": false,
+			"props": {
+				"text": "Finish check-in",
+				"classNames": [],
+				"events": [
+					{
+						"type": "navigation",
+						"id": "2zkfHXV5VaM12NBy5hFZFa",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "welcome",
+						"isHardCoded": true
+					}
+				],
+				"iconPosition": "top",
+				"style": {
+					"display": "flex",
+					"backgroundColor": "#3b82f6ff",
+					"fontSize": "28px",
+					"fontWeight": "500",
+					"width": "250px",
+					"height": "100px"
+				}
+			},
+			"displayName": "Button",
+			"custom": {
+				"states:9nmWFbpqwMe1qRWUqChLDC": {
+					"text": "Usar esta foto"
+				}
+			},
+			"parent": "ROOT",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {
+				"icon": "c33wGfwhcj"
+			}
+		},
+		"c33wGfwhcj": {
+			"type": {
+				"resolvedName": "Icon"
+			},
+			"isCanvas": false,
+			"props": {
+				"classNames": [],
+				"events": [],
+				"icon": "fa-solid fa-check"
+			},
+			"displayName": "Icon",
+			"custom": {},
+			"parent": "qLm1t7Ey8o",
+			"hidden": false,
+			"nodes": [],
+			"linkedNodes": {}
+		}
+	}
+}
