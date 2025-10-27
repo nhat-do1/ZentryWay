@@ -509,6 +509,22 @@
 				"classNames": [],
 				"events": [
 					{
+						"type": "method",
+						"dataclass": "Visits",
+						"events": [
+							"onclick"
+						],
+						"id": "1WFZKuHVvCxw7BMxva13wC",
+						"method": "ds.Visits.createVisit",
+						"params": [],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						},
+						"feedback": true
+					},
+					{
 						"type": "navigation",
 						"id": "2zkfHXV5VaM12NBy5hFZFa",
 						"events": [

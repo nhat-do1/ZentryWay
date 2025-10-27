@@ -37,6 +37,10 @@ exposed Function saveGuestEntity($guest)
 		End if 
 	End if 
 	
+exposed Function fetchGuestEntity()->$guest : 4D:C1709.Entity
+	$guestID:=Session:C1714.storage.client.guestInfo.ID
+	$guest:=ds:C1482.Guests.query("ID == :1"; $guestID).first()
+	
 	
 	
 	

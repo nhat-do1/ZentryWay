@@ -469,7 +469,43 @@
 			"props": {
 				"text": "",
 				"classNames": [],
-				"events": [],
+				"events": [
+					{
+						"type": "method",
+						"dataclass": "Visits",
+						"events": [
+							"onclick"
+						],
+						"id": "1hjXZjJk33EHHCGrgfKi1L",
+						"method": "ds.Visits.searchPriorVisit",
+						"params": [
+							{
+								"name": "email",
+								"type": "Variant",
+								"datasource": "email_input",
+								"id": "9NHryfQNppCxn1EKwdHZRv"
+							}
+						],
+						"datasource": "",
+						"returns": {
+							"name": "result",
+							"type": "Variable"
+						},
+						"feedback": true
+					},
+					{
+						"type": "navigation",
+						"id": "aoAnGzbraMLLfLv4dhHu3K",
+						"events": [
+							"onclick"
+						],
+						"externalLink": false,
+						"loader": "",
+						"parent": "same-tab",
+						"target": "guest_confirm",
+						"isHardCoded": true
+					}
+				],
 				"iconPosition": "left",
 				"style": {
 					"display": "flex",
