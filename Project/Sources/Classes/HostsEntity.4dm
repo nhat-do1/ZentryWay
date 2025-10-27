@@ -17,16 +17,16 @@ exposed Function notifyHost()
 	$param.clientId:=$oauthInfo.client_id
 	$param.clientSecret:=$oauthInfo.client_secret
 	// use saved token to bypass manual sign-in
-	$param.token:=cs:C1710.ClientSession.me.oauthToken
+	$param.token:=Session:C1714.storage.client.oauthToken
 	
 	// instantiate provider
 	$oAuth2:=cs:C1710.NetKit.OAuth2Provider.new($param)
 	// get new token silently
 	$json:=$oAuth2.getToken()
 	// update saved token
-	$tokenObj:=OB Copy:C1225($json.token; ck shared:K85:29; cs:C1710.ClientSession.me.oauthToken)
-	Use (cs:C1710.ClientSession.me.oauthToken)
-		cs:C1710.ClientSession.me.oauthToken:=New shared object:C1526("token"; $tokenObj)
+	$tokenObj:=OB Copy:C1225($json.token; ck shared:K85:29; Session:C1714.storage.client.oauthToken)
+	Use (Session:C1714.storage.client)
+		Session:C1714.storage.client.oauthToken.token:=$tokenObj
 	End use 
 	
 	// compose email
@@ -52,8 +52,8 @@ exposed Function notifyHost()
 		throw:C1805(500; "Unable to send email")
 	Else 
 		// save selected host for future use
-		Use (cs:C1710.ClientSession.me)
-			cs:C1710.ClientSession.me.selectedHostID:=This:C1470.ID
+		Use (Session:C1714.storage.client)
+			Session:C1714.storage.client.selectedHostID:=This:C1470.ID
 		End use 
 	End if 
 	

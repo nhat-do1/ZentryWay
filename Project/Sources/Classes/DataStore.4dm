@@ -11,6 +11,10 @@ exposed Function authentify($name : Text; $pw : Text)
 	If ($user#Null:C1517)
 		If (Verify password hash:C1534($pw; $user.pw))
 			Session:C1714.setPrivileges("client")
+			// create object to store current client info
+			Use (Session:C1714.storage)
+				Session:C1714.storage.client:=New shared object:C1526("language"; "eng")
+			End use 
 		Else 
 			throw:C1805(401; "Credentials do not match.")
 		End if 
