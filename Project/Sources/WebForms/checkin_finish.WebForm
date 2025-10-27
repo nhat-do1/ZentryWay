@@ -2,7 +2,34 @@
 	"metadata": {
 		"v": "1.0",
 		"datasources": [],
-		"styles": []
+		"styles": [],
+		"states": [
+			{
+				"label": "Base",
+				"id": "root"
+			},
+			{
+				"label": "Default",
+				"id": "tts3sJpYA7Kgy6hHtATrK5"
+			},
+			{
+				"label": "Spanish",
+				"id": "ca9Bw8ZEmgNvd8caHjsuLG",
+				"conditions": {
+					"id": "okc9a7EDGZgeUomjeY1qtG",
+					"type": "datasource",
+					"name": "condition",
+					"value": "esp",
+					"valueType": "hardCoded",
+					"path": "language:lang_option",
+					"dsType": "string",
+					"op": "eq"
+				}
+			}
+		],
+		"defaultStates": [
+			"tts3sJpYA7Kgy6hHtATrK5"
+		]
 	},
 	"components": {
 		"ROOT": {
@@ -71,7 +98,7 @@
 						"type": "paragraph",
 						"children": [
 							{
-								"text": "Confirm your check-in by selecting the button below."
+								"text": "Select the button below to confirm your check-in."
 							}
 						]
 					},
@@ -180,6 +207,51 @@
 							"children": [
 								{
 									"text": "Por favor lea el siguiente documento y luego seleccione una opción a continuación:"
+								}
+							]
+						}
+					],
+					"datasource": ""
+				},
+				"states:ca9Bw8ZEmgNvd8caHjsuLG": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Tu gafete se imprimirá en un momento."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Gracias por registrarte con ZentryWay."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": ""
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Selecciona el botón de abajo para confirmar tu registro."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "Luego, por favor espera a que tu anfitrión te acompañe al interior."
 								}
 							]
 						}
@@ -433,7 +505,7 @@
 			},
 			"isCanvas": false,
 			"props": {
-				"text": "Finish check-in",
+				"text": "Complete check-in",
 				"classNames": [],
 				"events": [
 					{
@@ -453,16 +525,29 @@
 				"style": {
 					"display": "flex",
 					"backgroundColor": "#3b82f6ff",
-					"fontSize": "28px",
+					"fontSize": "20px",
 					"fontWeight": "500",
-					"width": "250px",
-					"height": "100px"
+					"width": "220px",
+					"height": "80px",
+					"marginTop": "15px"
 				}
 			},
 			"displayName": "Button",
 			"custom": {
 				"states:9nmWFbpqwMe1qRWUqChLDC": {
 					"text": "Usar esta foto"
+				},
+				"states:ca9Bw8ZEmgNvd8caHjsuLG": {
+					"text": "Completar registro",
+					"style": {
+						"width": "220px"
+					}
+				},
+				"states:tts3sJpYA7Kgy6hHtATrK5": {
+					"text": "Complete check-in",
+					"style": {
+						"width": "220px"
+					}
 				}
 			},
 			"parent": "ROOT",
