@@ -58,15 +58,14 @@
 				"events": [
 					{
 						"type": "method",
-						"dataclass": "ClientSession",
+						"dataclass": "Guests",
 						"events": [
 							"onload"
 						],
-						"id": "oAESY8bSEMSwU2tFmXcsLz",
-						"method": "ClientSession.createGuestEntity",
+						"id": "iuZXXfiARUn41Bk9jC3Mq9",
+						"method": "ds.Guests.createGuestEntity",
 						"params": [],
 						"datasource": "",
-						"methodType": "singleton",
 						"returns": {
 							"name": "guest",
 							"type": "4D.Entity",

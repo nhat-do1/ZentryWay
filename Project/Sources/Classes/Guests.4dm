@@ -9,4 +9,9 @@ exposed Function storeGuestInfo($firstName : Text; $lastName : Text; $phone : Te
 		throw:C1805(400; "First and last name are required.")
 	End if 
 	
-	
+exposed Function createGuestEntity()->$guest : 4D:C1709.Entity
+	$guest:=This:C1470.new()
+	$guest.email:=Session:C1714.storage.client.guestInfo.email
+	$guest.firstName:=Session:C1714.storage.client.guestInfo.firstName
+	$guest.lastName:=Session:C1714.storage.client.guestInfo.lastName
+	$guest.phone:=Session:C1714.storage.client.guestInfo.phone
