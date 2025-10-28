@@ -7,8 +7,8 @@
 		<field name="date" uuid="7AB7B9C12EE54B07B544E95B5FBE402E" type="8" id="2"/>
 		<field name="checkin" uuid="3B96F5E133AE4C3E8C1CBE87667306AA" type="9" id="3"/>
 		<field name="checkout" uuid="CC566B5E155C455090487ED50FDD2CD2" type="9" id="4"/>
-		<field name="guestID" uuid="27E1866DD546456C8CB7E501448EC3D8" type="4" unique="true" id="5"/>
-		<field name="hostID" uuid="FDB084A33222498B8F4149E2C17D75F1" type="4" unique="true" id="6"/>
+		<field name="guestID" uuid="27E1866DD546456C8CB7E501448EC3D8" type="4" id="5"/>
+		<field name="hostID" uuid="FDB084A33222498B8F4149E2C17D75F1" type="4" id="6"/>
 		<field name="details" uuid="9A8E31A98996454E931B3CBF5F598B1C" type="21" blob_switch_size="2147483647" id="7"/>
 		<field name="documents" uuid="BB0E7F8CE0A341FABFA9F0E5ACA55EE5" type="18" id="8"/>
 		<primary_key field_name="ID" field_uuid="E64DEC42D8544A989DEC382262C7F549"/>
@@ -77,7 +77,7 @@
 			<table_ref uuid="A9274524C2724D00A7FA00B105F3C762" name="Visits"/>
 		</field_ref>
 	</index>
-	<index kind="regular" unique_keys="true" uuid="6A0CD8758D9843A2BFDCD4E88EABC21E" type="1">
+	<index kind="regular" uuid="6A0CD8758D9843A2BFDCD4E88EABC21E" type="1">
 		<field_ref uuid="FDB084A33222498B8F4149E2C17D75F1" name="hostID">
 			<table_ref uuid="A9274524C2724D00A7FA00B105F3C762" name="Visits"/>
 		</field_ref>
@@ -87,7 +87,7 @@
 			<table_ref uuid="0C69B62828674B5F805ED47C993F4187" name="Guests"/>
 		</field_ref>
 	</index>
-	<index kind="regular" unique_keys="true" uuid="B491153DAF674C5A8CB7E9EAF754DE8B" type="7">
+	<index kind="regular" uuid="B491153DAF674C5A8CB7E9EAF754DE8B" type="7">
 		<field_ref uuid="27E1866DD546456C8CB7E501448EC3D8" name="guestID">
 			<table_ref uuid="A9274524C2724D00A7FA00B105F3C762" name="Visits"/>
 		</field_ref>
