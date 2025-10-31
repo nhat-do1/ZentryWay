@@ -18,7 +18,29 @@
 			}
 		],
 		"styles": [],
-		"states": []
+		"states": [
+			{
+				"label": "Default",
+				"id": "qZ6wh7L7YJR4vB5Mvk8d3c"
+			},
+			{
+				"label": "Spanish",
+				"id": "8rxPg8RW2SuzjvvXvURvsz",
+				"conditions": {
+					"id": "gsocY4wTsJ4LZXsBFnnKxM",
+					"type": "datasource",
+					"name": "condition",
+					"value": "esp",
+					"valueType": "hardCoded",
+					"path": "language:lang_option",
+					"dsType": "string",
+					"op": "eq"
+				}
+			}
+		],
+		"defaultStates": [
+			"qZ6wh7L7YJR4vB5Mvk8d3c"
+		]
 	},
 	"components": {
 		"ROOT": {
@@ -416,6 +438,22 @@
 						}
 					],
 					"datasource": ""
+				},
+				"states:8rxPg8RW2SuzjvvXvURvsz": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "Usted es..."
+								}
+							]
+						}
+					],
+					"datasource": ""
 				}
 			},
 			"parent": "JaCZZPMq8d",
@@ -606,6 +644,22 @@
 									"underlined": false,
 									"strikethrough": false,
 									"text": "Regístrese rápidamente con su dirección de correo electrónico:"
+								}
+							]
+						}
+					],
+					"datasource": ""
+				},
+				"states:8rxPg8RW2SuzjvvXvURvsz": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"italic": false,
+									"underlined": false,
+									"strikethrough": false,
+									"text": "Aquí para ver a..."
 								}
 							]
 						}
@@ -841,6 +895,19 @@
 						}
 					],
 					"datasource": ""
+				},
+				"states:8rxPg8RW2SuzjvvXvURvsz": {
+					"doc": [
+						{
+							"type": "paragraph",
+							"children": [
+								{
+									"text": "¡Bienvenido de nuevo! Por favor, confirme la siguiente información para registrarse:"
+								}
+							]
+						}
+					],
+					"datasource": ""
 				}
 			},
 			"parent": "ROOT",
@@ -947,6 +1014,9 @@
 			"custom": {
 				"states:c4oxJHTbfXPoMaMNww7iKW": {
 					"text": "Notifica que estás aquí"
+				},
+				"states:8rxPg8RW2SuzjvvXvURvsz": {
+					"text": "Notificar a su anfitrión"
 				}
 			},
 			"parent": "ROOT",
