@@ -51,8 +51,8 @@ exposed Function notifyHost($host : 4D:C1709.Entity)
 	$email.textBody+="(This is an automated message. No need to reply.)\n"
 	$email.from:=$oauthInfo.host_email
 	
-	If ($host.ID#9)
-		// testing
+	$testing:=True:C214
+	If ($testing)
 		$email.to:=$oauthInfo.test_email
 	Else 
 		$email.to:=$host.email
