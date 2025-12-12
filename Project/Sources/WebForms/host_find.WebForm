@@ -546,13 +546,14 @@
 							},
 							{
 								"type": "datasource",
-								"dsType": "string",
 								"datasource": "$This.firstName",
 								"children": [
 									{
-										"text": "$This.firstName"
+										"text": "Host's First Name"
 									}
-								]
+								],
+								"dsType": "string",
+								"format": ""
 							},
 							{
 								"text": " "
@@ -592,13 +593,14 @@
 							},
 							{
 								"type": "datasource",
-								"dsType": "string",
 								"datasource": "$This.lastName",
 								"children": [
 									{
-										"text": "$This.lastName"
+										"text": "Host's Last Name"
 									}
-								]
+								],
+								"dsType": "string",
+								"format": ""
 							},
 							{
 								"text": " "
